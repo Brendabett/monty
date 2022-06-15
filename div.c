@@ -16,7 +16,7 @@ int i = 0, j = 0;
 if (*stack == NULL || (*stack)->next == NULL)
 {
 free_dlist(*stack);
-fprintf(stderr, "L%d: cant div, stack too shortn, line_number);
+fprintf(stderr, "L%d: cant div, stack too short\n", line_number);
 exit(EXIT_FAILURE);
 }
 temp = *stack;
@@ -26,7 +26,7 @@ j = (*stack)->n;
 if (i == 0)
 {
 free_dlist(*stack);
-fprintf(stderr, L%d: division by zeron, line_number);
+fprintf(stderr, "L%d: division by zero\n", line_number);
 exit(EXIT_FAILURE);
 }
 (*stack)->n = j / i;
@@ -49,7 +49,7 @@ stack_t *temp;
 if (*stack == NULL || (*stack)->next == NULL)
 {
 free_dlist(*stack);
-fprintf(stderr, L%d: cant mul, stack too short\n", line_number);
+fprintf(stderr, "L%d: cant mul, stack too short\n", line_number);
 exit(EXIT_FAILURE);
 }
 temp = *stack;
@@ -74,13 +74,13 @@ stack_t *temp;
 if (*stack == NULL || (*stack)->next == NULL)
 {
 free_dlist(*stack);
-fprintf(stderr, "L%d: cant mod, stack too shortn, line_number);
+fprintf(stderr, "L%d: cant mod, stack too short\n", line_number);
 exit(EXIT_FAILURE);
 }
 if ((*stack)->n == 0)
 {
 free_dlist(*stack);
-fprintf(stderr, L%d: division by zeron, line_number);
+fprintf(stderr, "L%d: division by zero\n", line_number);
 exit(EXIT_FAILURE);
 }
 temp = *stack;
@@ -88,6 +88,4 @@ temp = *stack;
 (*stack)->n %= temp->n;
 (*stack)->prev = NULL;
 free(temp);
-}' > div.c
-' > div.c
-
+}
