@@ -21,7 +21,7 @@ err(1);
 fptr = fopen(argv[1], "r");
 if (fptr == NULL)
 err(2, argv[1]);
-while getline(&line, &size, fptr) != -1
+while (getline(&line, &size, fptr) != -1)
 {
 if (!strcmp(line, "\n") || *line == '#')
 {
