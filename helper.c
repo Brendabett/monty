@@ -1,4 +1,4 @@
-#include monty.h
+#include "monty.h"
 /**
   * break_line - brak up the line read.
   * @line: line read.
@@ -14,14 +14,14 @@ int i = 0;
 tokens = malloc(sizeof(char *) * (sizeof(line) + 1));
 if (tokens == NULL)
 {
-fprintf(stderr, Error: malloc failedn);
+fprintf(stderr, "Error: malloc failed\n");
 exit(EXIT_FAILURE);
 }
-token = strtok(line,  tn);
+token = strtok(line, " \t\n");
 while (token != NULL)
 {
 tokens[i] = token;
-token = strtok(NULL,  tn );
+token = strtok(NULL, " \t\n ");
 i++;
 }
 tokens[i] = NULL;
