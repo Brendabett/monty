@@ -1,4 +1,4 @@
-#include monty.h
+#include "monty.h"
 
 int short_stack_error(unsigned int line_number, char *op);
 int div_error(unsigned int line_number);
@@ -14,7 +14,7 @@ int pchar_error(unsigned int line_number, char *message);
  */
 int pop_error(unsigned int line_number)
 {
-fprintf(stderr, L%u: cant pop an empty stack\n", line_number);
+fprintf(stderr, "L%u: cant pop an empty stack\n", line_number);
 return (EXIT_FAILURE);
 }
 
@@ -26,7 +26,7 @@ return (EXIT_FAILURE);
  */
 int pint_error(unsigned int line_number)
 {
-fprintf(stderr, "L%d: cant pint, stack emptyn, line_number);
+fprintf(stderr, "L%d: cant pint, stack empty\n", line_number);
 return (EXIT_FAILURE);
 }
 
@@ -40,7 +40,7 @@ return (EXIT_FAILURE);
  */
 int short_stack_error(unsigned int line_number, char *op)
 {
-fprintf(stderr, L%u: cant %s, stack too short\n", line_number, op);
+fprintf(stderr, "L%u: cant %s, stack too short\n", line_number, op);
 return (EXIT_FAILURE);
 }
 
@@ -66,6 +66,6 @@ return (EXIT_FAILURE);
  */
 int pchar_error(unsigned int line_number, char *message)
 {
-fprintf(stderr, "L%u: cant pchar, %sn, line_number, message);
+fprintf(stderr, "L%u: cant pchar, %s\n", line_number, message);
 return (EXIT_FAILURE);
 }
