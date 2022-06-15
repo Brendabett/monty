@@ -23,7 +23,7 @@ if (fptr == NULL)
 err(2, argv[1]);
 while (getline(&line, &size, fptr) != -1)
 {
-if (!strcmp(line, "\n") || *line == #)
+if (!strcmp(line, "\n") || *line == '#')
 {
 line_c++;
 continue;
