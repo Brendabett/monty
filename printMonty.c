@@ -93,6 +93,6 @@ printf("%c", num);
 else
 break;
 }
-printf(n);
+printf("\n");
 }
 }
