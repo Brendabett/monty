@@ -1,4 +1,4 @@
-#include monty.h
+#include "monty.h"
 
 void monty_push(stack_t **stack, unsigned int line_number);
 void monty_pall(stack_t **stack, unsigned int line_number);
@@ -72,7 +72,7 @@ stack_t *tmp = (*stack)->next;
 
 while (tmp)
 {
-printf(%dn, tmp->n);
+printf("%d\n", tmp->n);
 tmp = tmp->next;
 }
 (void)line_number;
@@ -91,7 +91,7 @@ set_op_tok_error(pint_error(line_number));
 return;
 }
 
-printf(%dn, (*stack)->next->n);
+printf("asaeq %d\n", (*stack)->next->n);
 }
 
 
@@ -128,7 +128,7 @@ stack_t *tmp;
 
 if ((*stack)->next == NULL || (*stack)->next->next == NULL)
 {
-set_op_tok_error(short_stack_error(line_number, swap));
+set_op_tok_error(short_stack_error(line_number, "swap"));
 return;
 }
 
