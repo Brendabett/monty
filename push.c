@@ -62,7 +62,7 @@ free(temp);
 else
 {
 free_dlist(*stack);
-fprintf(stderr, "L%d: cant pop an empty stackn, line_number);
+fprintf(stderr, "L%d: cant pop an empty stack\n", line_number);
 exit(EXIT_FAILURE);
 }
 }
@@ -81,7 +81,7 @@ int temp = 0;
 if (*stack == NULL || (*stack)->next == NULL)
 {
 free_dlist(*stack);
-fprintf(stderr, L%d: cant swap, stack too short\n", line_number);
+fprintf(stderr, "L%d: cant swap, stack too short\n", line_number);
 exit(EXIT_FAILURE);
 }
 temp = (*stack)->n;
@@ -103,7 +103,7 @@ stack_t *temp;
 if (*stack == NULL || (*stack)->next == NULL)
 {
 free_dlist(*stack);
-fprintf(stderr, "L%d: cant add, stack too shortn, line_number);
+fprintf(stderr, "L%d: cant add, stack too short'n", line_number);
 exit(EXIT_FAILURE);
 }
 temp = *stack;
@@ -126,7 +126,7 @@ stack_t *temp;
 if (*stack == NULL || (*stack)->next == NULL)
 {
 free_dlist(*stack);
-fprintf(stderr, L%d: cant sub, stack too short\n", line_number);
+fprintf(stderr, "L%d: cant sub, stack too short\n", line_number);
 exit(EXIT_FAILURE);
 }
 temp = *stack;
