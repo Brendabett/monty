@@ -1,4 +1,4 @@
-#include monty.h
+#include "monty.h"
 
 void monty_add(stack_t **stack, unsigned int line_number);
 void monty_sub(stack_t **stack, unsigned int line_number);
@@ -18,7 +18,7 @@ void monty_add(stack_t **stack, unsigned int line_number)
 {
 if ((*stack)->next == NULL || (*stack)->next->next == NULL)
 {
-set_op_tok_error(short_stack_error(line_number, add));
+set_op_tok_error(short_stack_error(line_number, "add"));
 return;
 }
 
@@ -39,7 +39,7 @@ void monty_sub(stack_t **stack, unsigned int line_number)
 {
 if ((*stack)->next == NULL || (*stack)->next->next == NULL)
 {
-set_op_tok_error(short_stack_error(line_number, sub));
+set_op_tok_error(short_stack_error(line_number, "sub"));
 return;
 }
 
@@ -60,7 +60,7 @@ void monty_div(stack_t **stack, unsigned int line_number)
 {
 if ((*stack)->next == NULL || (*stack)->next->next == NULL)
 {
-set_op_tok_error(short_stack_error(line_number, div));
+set_op_tok_error(short_stack_error(line_number," div"));
 return;
 }
 
@@ -87,7 +87,7 @@ void monty_mul(stack_t **stack, unsigned int line_number)
 {
 if ((*stack)->next == NULL || (*stack)->next->next == NULL)
 {
-set_op_tok_error(short_stack_error(line_number, mul));
+set_op_tok_error(short_stack_error(line_number, "mul"));
 return;
 }
 
@@ -108,7 +108,7 @@ void monty_mod(stack_t **stack, unsigned int line_number)
 {
 if ((*stack)->next == NULL || (*stack)->next->next == NULL)
 {
-set_op_tok_error(short_stack_error(line_number, mod));
+set_op_tok_error(short_stack_error(line_number, "mod"));
 return;
 }
 
