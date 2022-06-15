@@ -32,7 +32,7 @@ if (*stack != NULL)
 printf("%d\n", (*stack)->n);
 else
 {
-fprintf(stderr, "L%d: cant pint, stack emptyn, line_number);
+fprintf(stderr, "L%d: cant pint, stack empty\n", line_number);
 exit(EXIT_FAILURE);
 }
 }
@@ -51,7 +51,7 @@ int num = 0;
 if (*stack == NULL)
 {
 free_dlist(*stack);
-fprintf(stderr, L%d: cant pchar, stack empty\n", line_number);
+fprintf(stderr, "L%d: cant pchar, stack empty\n", line_number);
 exit(EXIT_FAILURE);
 }
 
@@ -61,7 +61,7 @@ printf("%c\n", num);
 else
 {
 free_dlist(*stack);
-fprintf(stderr, "L%d: cant pchar, value out of rangen, line_number);
+fprintf(stderr, "L%d: cant pchar, value out of range\n", line_number);
 exit(EXIT_FAILURE);
 }
 }
@@ -81,7 +81,7 @@ stack_t *temp = *stack;
 (void)line_number;
 
 if (*stack == NULL)
-printf(n);
+printf("\n");
 else
 {
 while (temp != NULL)
@@ -89,11 +89,10 @@ while (temp != NULL)
 num = temp->n;
 temp = temp->next;
 if (num > 0 && num <= 127)
-printf(%c, num);
+printf("%c", num);
 else
 break;
 }
 printf(n);
 }
-}' > printMonty.c
-
+}
