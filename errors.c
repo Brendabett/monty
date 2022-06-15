@@ -19,25 +19,24 @@ case 1:
 fprintf(stderr, "USAGE: monty file\n");
 break;
 case 2:
-fprintf(stderr, "Error: Cant open file %sn, va_arg(ag, char *));
+fprintf(stderr, "Error: Cant open file %s\n", va_arg(ag, char *));
 break;
 case 3:
 line_num = va_arg(ag, int);
 opc = va_arg(ag, char *);
-fprintf(stderr, L%d: unknown instruction %sn, line_num, opc);
+fprintf(stderr, "L%d: unknown instruction %s\n", line_num, opc);
 free(va_arg(ag, char **));
 free(va_arg(ag, char *));
 break;
 case 4:
-fprintf(stderr, Error: malloc failedn);
+fprintf(stderr, "Error: malloc failed\n");
 break;
 case 5:
-fprintf(stderr, L%d: usage: push integern, va_arg(ag, int));
+fprintf(stderr, "L%d: usage: push integer\n", va_arg(ag, int));
 break;
 default:
 break;
 }
 va_end(ag);
 exit(EXIT_FAILURE);
-}' > errors.c
-
+}
