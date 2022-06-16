@@ -52,5 +52,6 @@ Comments, indicated with `#`, are not executed by the interpreter.
 When there is no errors, `monty` returns `0`. Otherwise, returns `1`
 
 ## Authors
+
 * Brenda Bett: [GitHub](https://github.com/Brendabett)
 * Evans Kiprotich: [GitHub](https://github.com/KEvans254)
