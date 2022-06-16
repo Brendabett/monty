@@ -49,7 +49,6 @@ $
 Comments, indicated with `#`, are not executed by the interpreter.
 
 ### Return value
-
 When there is no errors, `monty` returns `0`. Otherwise, returns `1`
 
 ## Authors
